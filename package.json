@@ -1,0 +1,26 @@
+{
+  "name": "chat_app_api",
+  "version": "1.0.0",
+  "description": "main API for the chat application",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js"
+  },
+  "keywords": [
+    "chat",
+    "application",
+    "encrypted",
+    "node"
+  ],
+  "author": "JSbad",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "ws": "^8.5.0"
+  }
+}
