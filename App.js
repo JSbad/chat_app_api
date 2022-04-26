@@ -18,6 +18,6 @@ const app = express();
     console.log(`Server running at http://localhost:${port}`);
   });
   
-  
+  app.on('listening', () => {sockets.wss(app)});
 
 
