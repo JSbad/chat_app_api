@@ -3,22 +3,22 @@ const http = require('http');
 
 let connections = []
 
-const server = http.createServer;
+const server = http.createServer();
 
-const wss = new WebSocketServer({server});
+const wss = new WebSocketServer({server:server});
   
 wss.on('request', (request) => {
 
-console.log("Websocket request received.")
+console.log("Websocket request received")
 let connection = request.accept(null, request.origin);
 connections.push(connection);
 let senderId = request.httpRequest.url.split("/")
 connection.userId = senderId;
 connection.on("open", () => {
-  console.log("Server socket Connection opened.")
+  console.log("Server socket Connection opened")
   });
 connection.on("close", () => {
-  console.log("Server socket Connection closed.")
+  console.log("Server socket Connection closed")
 });
 connection.on('message', (message) => {
   let msgContent = JSON.parse(message);
