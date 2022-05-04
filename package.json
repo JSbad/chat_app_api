@@ -4,8 +4,11 @@
   "description": "main API for the chat application",
   "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon App.js"
+    "start": "nodemon App.js",
+    "tables-create": "node ./database/queries/tables_create.js",
+    "tables-delete": "node ./database/queries/tables_delete.js",
+    "tables-populate": "node ./database/queries/tables_populate.js",
+    "tables-empty": "node ./database/queries/tables_empty.js"
   },
   "keywords": [
     "chat",
@@ -21,8 +24,9 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "md5": "^2.3.0",
     "mysql2": "^2.3.3",
+    "uuid": "^8.3.2",
     "ws": "^8.5.0"
   }
-  
 }

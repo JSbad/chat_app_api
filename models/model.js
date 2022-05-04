@@ -6,6 +6,8 @@ class Model {
     static foreignIdentifier = "";
 
     static fillable_properties = [];
+    static properties = [];
+    static private_properties = [];
     static public_properties = ["date_updated", "date_created"];
 
     constructor(values) {

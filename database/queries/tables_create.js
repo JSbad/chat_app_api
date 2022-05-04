@@ -1,15 +1,13 @@
 const database = require('../mysql-db.js');
-const Post = require('../../models/post.js');
-const Comment = require('../../models/comment.js');
 const User = require('../../models/user.js');
+const Contact = require('../../models/contact.js');
 
 async function execute(){
-    await database.createTable("posts", Post.public_properties);
-    console.log("Posts created");
-    await database.createTable("comments", Comment.public_properties);
-    console.log("Comments created");
-    await database.createTable("users", User.public_properties);
+    await database.createTable("users", User.properties);
     console.log("Users created");
+    
+    await database.createTable("contacts", Contact.properties);
+    console.log("Contacts created");
     
     database.closeConnection();
 };
