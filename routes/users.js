@@ -1,11 +1,11 @@
-const users = require("express").Router();
-const response = require("../models/response.js");
-const User = require("../models/user.js");
-const Contact = require("../models/contact.js");
-const { v1: uuidv1 } = require("uuid");
+const users = require('express').Router();
+const response = require('../models/response.js');
+const User = require('../models/user.js');
+const Contact = require('../models/contact.js');
+const { v1: uuidv1 } = require('uuid');
 
 //Handle creating a user
-users.post("/", async (req, res) => {
+users.post('/', async (req, res) => {
   const dateCreated = new Date().toLocaleString('en-GB');
   const dateUpdated = dateCreated;
   const userId = uuidv1();
@@ -29,12 +29,12 @@ users.post("/", async (req, res) => {
     else
       res.status(400).json(response.prepare(400, results, error));
   } else {
-    res.status(400).json(response.prepare(400, [], [{ "message": "Missing data" }]));
+    res.status(400).json(response.prepare(400, [], [{ 'message': 'Missing data' }]));
   }
 });
 
 //Handle /users/example_id
-users.get("/:id", async(req, res) => {
+users.get('/:id', async(req, res) => {
   const userId = req.params.id;
   const [results, error] = await User.getById(userId);
   
@@ -44,7 +44,7 @@ users.get("/:id", async(req, res) => {
 });
 
 //Handle users/example_id/contacts
-users.get("/:id/contacts", async(req, res) => {
+users.get('/:id/contacts', async(req, res) => {
   const userId = req.params.id;
   const [results, error] = await Contact.getByForeignId(userId);
 

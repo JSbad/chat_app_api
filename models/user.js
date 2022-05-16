@@ -1,11 +1,11 @@
-const Model = require("./model.js");
+const Model = require('./model.js');
 
 class User extends Model {
-  static tableName = "users";
-  static identifier = "user_id";
+  static tableName = 'users';
+  static identifier = 'user_id';
 
-  static fillable_properties = ["username"];
-  static private_properties = ["password"];
+  static fillable_properties = ['username'];
+  static private_properties = ['password'];
 
   static public_properties = [
     this.identifier,

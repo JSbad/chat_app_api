@@ -1,11 +1,8 @@
 const WebSocketServer = require('ws').Server;
-const http = require('http');
 
 let connections = []
 
-const server = http.createServer();
-
-const wss = new WebSocketServer({server:server});
+const wss = new WebSocketServer({port:8080});
   
 wss.on('request', (request) => {
 

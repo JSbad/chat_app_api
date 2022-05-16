@@ -83,7 +83,7 @@ async function createTable(tableName, properties) {
   } catch (err) {
     error = [err];
   }
-
+  console.log(error);
   return [results, error];
 }
 
