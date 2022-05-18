@@ -2,24 +2,25 @@
   "users": [
     {
       "user_id": "51c4d370-c597-11ec-9ea4-198859a97f56",
-      "username": "test1",
+      "username": "user1",
       "date_updated": "26/12/2022, 11:18:04",
       "date_created": "25/04/2022, 14:28:15",
-      "password": "41c71d1ef2460a191eb730b8a4bbccfa"
+      "password": "5a105e8b9d40e1329780d62ea2265d8a"
     },
     {
       "user_id": "56a9b9a0-c597-11ec-9ea4-198859a97f56",
-      "username": "test2",
+      "username": "user2",
       "date_updated": "26/12/2022, 11:18:04",
       "date_created": "25/04/2022, 14:28:15",
-      "password": "8c342aa38294d8f0674916cb6fef479b"
+      "password": "ad0234829205b9033196ba818f7a872b"
+      
     },
     {
       "user_id": "59f31840-c597-11ec-9ea4-198859a97f56",
-      "username": "test3",
+      "username": "user3",
       "date_updated": "26/12/2022, 11:18:04",
       "date_created": "25/04/2022, 14:28:15",
-      "password": "9587036d6ca7aa9baff1fd5c5204b789"
+      "password": "8ad8757baa8564dc136c1e07507f4a98"
     }
   ],
   "contacts": [

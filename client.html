@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            const ws = new WebSocket("ws://localhost:8081");
+            ws.addEventListener("open", () => {
+                ws.send("testmsg");
+            })
+        </script>
+    </body>
+</html>
