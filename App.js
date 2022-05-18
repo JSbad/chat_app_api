@@ -5,8 +5,11 @@ const sockets = require('./server.js');
 const port = 3000;
 const app = express();
 
-//enable cors
+//Enable cors
 app.use(cors());
+//Enable body parsing
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 //Handle all routes in routes/index.js
 app.use('/', routes);
   

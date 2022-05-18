@@ -10,12 +10,7 @@ routes.use('/login', login);
 
 //Handle /
 routes.get('/', (req, res) => {
-  let sess = req.session;
-    if (sess.user) {
-      return res.redirect('/:id');
-    } else {
-        res.status(200).json(response.prepare(200, [], []));
-      }
+  res.status(200).json(response.prepare(200, [], []));
 });
 
 //Handle all other paths
